@@ -1,13 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
 <scheme version="2.0" title="" description="">
 	<nodes>
-		<node id="0" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="CSV File Import" position="(73.0, 149.0)" />
+		<node id="0" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="CSV File Import" position="(61.0, 148.0)" />
 		<node id="1" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWTable" project_name="Orange3" version="" title="Data Table" position="(215.0, 263.0)" />
 		<node id="2" name="Violin Plot" qualified_name="Orange.widgets.visualize.owviolinplot.OWViolinPlot" project_name="Orange3" version="" title="Violin Plot" position="(213.0, 177.0)" />
-		<node id="3" name="Distributions" qualified_name="Orange.widgets.visualize.owdistributions.OWDistributions" project_name="Orange3" version="" title="Distributions" position="(213.0, 94.0)" />
+		<node id="3" name="Distributions" qualified_name="Orange.widgets.visualize.owdistributions.OWDistributions" project_name="Orange3" version="" title="Distributions" position="(198.0, 17.0)" />
 		<node id="4" name="Scatter Plot" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" project_name="Orange3" version="" title="Scatter Plot" position="(217.0, 356.0)" />
 		<node id="5" name="Line Plot" qualified_name="Orange.widgets.visualize.owlineplot.OWLinePlot" project_name="Orange3" version="" title="Line Plot" position="(218.0, 444.0)" />
-		<node id="6" name="Bar Plot" qualified_name="Orange.widgets.visualize.owbarplot.OWBarPlot" project_name="Orange3" version="" title="Bar Plot" position="(215.0, 25.0)" />
+		<node id="6" name="Bar Plot" qualified_name="Orange.widgets.visualize.owbarplot.OWBarPlot" project_name="Orange3" version="" title="Bar Plot" position="(125.0, -50.0)" />
+		<node id="7" name="Select Columns" qualified_name="Orange.widgets.data.owselectcolumns.OWSelectAttributes" project_name="Orange3" version="" title="Select Columns" position="(386.0, 57.0)" />
+		<node id="8" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWTable" project_name="Orange3" version="" title="Data Table (1)" position="(539.0, 53.0)" />
 	</nodes>
 	<links>
 		<link id="0" source_node_id="0" sink_node_id="1" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
@@ -16,6 +18,8 @@
 		<link id="3" source_node_id="0" sink_node_id="4" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
 		<link id="4" source_node_id="0" sink_node_id="5" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
 		<link id="5" source_node_id="0" sink_node_id="6" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="6" source_node_id="0" sink_node_id="7" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="7" source_node_id="7" sink_node_id="8" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
 	</links>
 	<annotations />
 	<thumbnail />
@@ -93,23 +97,43 @@ cGVyc29uYWxpemFkb3OUSwGMC1JhZGlvX0FNX0ZNlEsBjBRIaXN0b3JpY29fdHJvY2Ffb2xlb5RL
 AowVQ29kaWdvX2NvbmNlc3Npb25hcmlhlEsCaBhLAYwLRmFpeGFfUHJlY2+USwF1jAVtZXRhc5R9
 lCiMCETDqWJpdG9zlEsDjAZNb2RlbG+USwOMAkttlEsDdXViYXUu
 </properties>
-		<properties node_id="6" format="pickle">gASVeQMAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZl
-ZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAAAABCAAAAIAAABVUAAAL/AAAA+wAAAGgAAASIAAAC
-ZwAAAAACAAAABVYAAABCAAAARQAABVUAAAL/lIwJc2VsZWN0aW9ulF2UjBVudW1weS5jb3JlLm11
-bHRpYXJyYXmUjAZzY2FsYXKUk5SMBW51bXB5lIwFZHR5cGWUk5SMAmk4lImIh5RSlChLA4wBPJRO
-Tk5K/////0r/////SwB0lGJDCJMAAAAAAAAAlIaUUpRhjA92aXN1YWxfc2V0dGluZ3OUfZSMBWdy
-YXBolH2UjAtfX3ZlcnNpb25fX5RLAYwQY29udGV4dF9zZXR0aW5nc5RdlIwVb3Jhbmdld2lkZ2V0
-LnNldHRpbmdzlIwHQ29udGV4dJSTlCmBlH2UKIwGdmFsdWVzlH2UKIwJYW5ub3RfdmFylIwGTW9k
-ZWxvlEtnhpSMCWNvbG9yX3ZhcpSMC0ZhaXhhX1ByZWNvlEtlhpSMCWdyb3VwX3ZhcpROSv7///+G
-lIwMc2VsZWN0ZWRfdmFylIwFUm9kYXOUS2aGlGgXfZRoGUsBdYwKYXR0cmlidXRlc5R9lCiMAklE
-lEsCjApGYWJyaWNhbnRllEsBjANBbm+USwKMCUNhdGVnb3JpYZRLAYwFQ291cm+USwGMC0NvbWJ1
-c3RpdmVslEsBjAxWb2x1bWVfbW90b3KUSwGMCUNpbGluZHJvc5RLAowLVGlwb19jYW1iaW+USwGM
-CFRyYcOnw6NvlEsBjAZQb3J0YXOUSwFoLEsCjANDb3KUSwGMB0FpcmJhZ3OUSwKMBVByZWNvlEsC
-jBROdW1lcm9fcHJvcHJpZXRhcmlvc5RLAowTRGF0YV91bHRpbWFfbGF2YWdlbZRLBIwXQWRlc2l2
-b3NfcGVyc29uYWxpemFkb3OUSwGMC1JhZGlvX0FNX0ZNlEsBjBRIaXN0b3JpY29fdHJvY2Ffb2xl
-b5RLAowVQ29kaWdvX2NvbmNlc3Npb25hcmlhlEsCjBVDbGFzc2lmaWNhY2FvX1ZlaWN1bG+USwFo
-J0sBdYwFbWV0YXOUfZQojAhEw6liaXRvc5RLA2gkSwOMAkttlEsDdXViYXUu
+		<properties node_id="6" format="pickle">gASVJgMAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZl
+ZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAAAABCAAAAIAAABVUAAAL/AAABNAAAAEUAAATBAAAC
+RAAAAAACAAAABVYAAABCAAAARQAABVUAAAL/lIwJc2VsZWN0aW9ulF2UjA92aXN1YWxfc2V0dGlu
+Z3OUfZSMBWdyYXBolH2UjAtfX3ZlcnNpb25fX5RLAYwQY29udGV4dF9zZXR0aW5nc5RdlIwVb3Jh
+bmdld2lkZ2V0LnNldHRpbmdzlIwHQ29udGV4dJSTlCmBlH2UKIwGdmFsdWVzlH2UKIwJYW5ub3Rf
+dmFylIwGTW9kZWxvlEtnhpSMCWNvbG9yX3ZhcpSMC0ZhaXhhX1ByZWNvlEtlhpSMCWdyb3VwX3Zh
+cpROSv7///+GlIwMc2VsZWN0ZWRfdmFylIwCSUSUS2aGlGgJfZRoC0sBdYwKYXR0cmlidXRlc5R9
+lCiMAklElEsCjApGYWJyaWNhbnRllEsBjANBbm+USwKMCUNhdGVnb3JpYZRLAYwFQ291cm+USwGM
+C0NvbWJ1c3RpdmVslEsBjAxWb2x1bWVfbW90b3KUSwGMCUNpbGluZHJvc5RLAowLVGlwb19jYW1i
+aW+USwGMCFRyYcOnw6NvlEsBjAZQb3J0YXOUSwGMBVJvZGFzlEsCjANDb3KUSwGMB0FpcmJhZ3OU
+SwKMBVByZWNvlEsCjBROdW1lcm9fcHJvcHJpZXRhcmlvc5RLAowTRGF0YV91bHRpbWFfbGF2YWdl
+bZRLBIwXQWRlc2l2b3NfcGVyc29uYWxpemFkb3OUSwGMC1JhZGlvX0FNX0ZNlEsBjBRIaXN0b3Jp
+Y29fdHJvY2Ffb2xlb5RLAowVQ29kaWdvX2NvbmNlc3Npb25hcmlhlEsCjBVDbGFzc2lmaWNhY2Fv
+X1ZlaWN1bG+USwGMC0ZhaXhhX1ByZWNvlEsBdYwFbWV0YXOUfZQojAhEw6liaXRvc5RLA4wGTW9k
+ZWxvlEsDjAJLbZRLA3V1YmF1Lg==
 </properties>
+		<properties node_id="7" format="pickle">gASVJgQAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNpZ25v
+cmVfbmV3X2ZlYXR1cmVzlIiME3NhdmVkV2lkZ2V0R2VvbWV0cnmUQ0IB2dDLAAMAAAAAAZYAAAAg
+AAAD7QAAApwAAAGWAAAARQAAA+0AAAKcAAAAAAAAAAAFVgAAAZYAAABFAAAD7QAAApyUjBJ1c2Vf
+aW5wdXRfZmVhdHVyZXOUiYwLX192ZXJzaW9uX1+USwGMEGNvbnRleHRfc2V0dGluZ3OUXZSMFW9y
+YW5nZXdpZGdldC5zZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9lCiMBnZhbHVlc5R9lCiMEWRvbWFp
+bl9yb2xlX2hpbnRzlH2UKIwCSUSUSwKGlIwJYXZhaWxhYmxllEsAhpSMA0Fub5RLAoaUaBVLAYaU
+jAlDYXRlZ29yaWGUSwGGlGgVSwKGlIwFQ291cm+USwGGlGgVSwOGlIwLQ29tYnVzdGl2ZWyUSwGG
+lGgVSwSGlIwMVm9sdW1lX21vdG9ylEsBhpRoFUsFhpSMCkZhYnJpY2FudGWUSwGGlGgVSwaGlIwJ
+Q2lsaW5kcm9zlEsChpRoFUsHhpSMC1RpcG9fY2FtYmlvlEsBhpRoFUsIhpSMCFRyYcOnw6NvlEsB
+hpRoFUsJhpSMBlBvcnRhc5RLAYaUaBVLCoaUjAVSb2Rhc5RLAoaUaBVLC4aUjANDb3KUSwGGlGgV
+SwyGlIwHQWlyYmFnc5RLAoaUaBVLDYaUjAVQcmVjb5RLAoaUaBVLDoaUjBROdW1lcm9fcHJvcHJp
+ZXRhcmlvc5RLAoaUaBVLD4aUjBNEYXRhX3VsdGltYV9sYXZhZ2VtlEsEhpRoFUsQhpSMF0FkZXNp
+dm9zX3BlcnNvbmFsaXphZG9zlEsBhpRoFUsRhpSMC1JhZGlvX0FNX0ZNlEsBhpRoFUsShpSMFEhp
+c3Rvcmljb190cm9jYV9vbGVvlEsChpRoFUsThpSMFUNvZGlnb19jb25jZXNzaW9uYXJpYZRLAoaU
+aBVLFIaUjBVDbGFzc2lmaWNhY2FvX1ZlaWN1bG+USwGGlGgVSxWGlIwIRMOpYml0b3OUSwOGlGgV
+SxaGlIwCS22USwOGlGgVSxeGlIwLRmFpeGFfUHJlY2+USwGGlGgVSxiGlIwGTW9kZWxvlEsDhpSM
+BG1ldGGUSwCGlHVK/v///4aUaAdLAXWMCmF0dHJpYnV0ZXOUfZQoaBNLAmgmSwFoF0sCaBpLAWgd
+SwFoIEsBaCNLAWgpSwJoLEsBaC9LAWgySwFoNUsCaDhLAWg7SwJoPksCaEFLAmhESwRoR0sBaEpL
+AWhNSwJoUEsCaFNLAWhcSwF1jAVtZXRhc5R9lChoVksDaF9LA2hZSwN1dWJhdS4=
+</properties>
+		<properties node_id="8" format="literal">{'auto_commit': True, 'color_by_class': False, 'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00B\x00\x00\x00E\x00\x00\x05U\x00\x00\x02\xff\x00\x00\x00B\x00\x00\x00E\x00\x00\x05U\x00\x00\x02\xff\x00\x00\x00\x00\x00\x00\x00\x00\x05V\x00\x00\x00B\x00\x00\x00E\x00\x00\x05U\x00\x00\x02\xff', 'select_rows': False, 'show_attribute_labels': False, 'show_distributions': False, 'stored_selection': {'rows': [], 'columns': []}, 'stored_sort': [], '__version__': 1}</properties>
 	</node_properties>
 	<session_state>
 		<window_groups />
