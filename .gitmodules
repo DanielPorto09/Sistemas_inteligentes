@@ -1,0 +1,3 @@
+[submodule "Regressao"]
+	path = Regressao
+	url = https://github.com/LucasIgarashi/Regressao.git
